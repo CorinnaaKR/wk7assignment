@@ -21,15 +21,11 @@ app.get("/brain", async function (req, res) {
   res.json(response.rows);
 });
 
-app.post("/add-character", (req, res) => {
-  const newCharacter = req.body;
+app.post("/add-brain", (req, res) => {
+  const newEntry = req.body;
   const query = db.query(
-    `INSERT INTO character (name, age, gender, class, race, background, alignment, other) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
-    [
-      newCharacter.formValues.name,
-      newCharacter.formValues.age,
-      newCharacter.formValues.gender,
-    ]
+    `INSERT INTO brain (name, type, entry) VALUES ($1, $2, $3)`,
+    [newEntry.name, newEntry.type, newEntry.entry]
   );
   res.json("Data sent", query);
 });

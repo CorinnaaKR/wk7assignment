@@ -1,14 +1,14 @@
 //TODO: SET UP A FORM, COLLECT USERS DATA, SEND DATA TO SERVER
 //STORE DATA IN STATE (FORMVALUES)
 //SUBMIT EVENT --> HANDLER AND LISTENEER
-//CHANGE EVENT --> HANDLER AND LISTENER 
+//CHANGE EVENT --> HANDLER AND LISTENER
 //COLLECT THE DATA AND UPDATE STATE
 //FETCH SERVER POST ROUTE & SEND FORM VALUES
 
-fetch("https://localhost:8080/endpoint", {
-    headers:
-    body:
-})
+// fetch("https://localhost:8080/endpoint", {
+//     headers:
+//     body:
+// })
 
 //SET UP AN ACCESSIBLE, VALIDATED FORM. REMEMBER TO TRACK THE CHANGES
 //BE CONSIST WITH NAMING CONVENTIONS
@@ -16,7 +16,6 @@ fetch("https://localhost:8080/endpoint", {
 import { useState } from "react";
 
 export default function Form() {
-
   const [formData, setFormData] = useState({
     name: "",
     type: "",
@@ -31,24 +30,16 @@ export default function Form() {
     event.preventDefault();
     //STEP 4
     //fetch POST server route
-app.post("/add-brain", (req, res) => {
-  const { name, type, entry } = req.body;
 
-  try {
-    const query = db.query(
-      `INSERT INTO brain (name, type, entry) VALUES 
-($1, $2, $3);`,
-      [name, type, entry]
-    );
-    res.status(200).json({ success: true });
-  } catch (error) {
-    console.error("Error in add-brain route", error);
-    res.status(500).json({ success: false });
+    fetch("http://localhost:8080/add-brain", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ formData }),
+    });
+    //polling demo (fetch request for adding new data /add-brain)
   }
-});
-    console.log(formData);
-  }
-
   return (
     <>
       <form onSubmit={handleSubmit}>

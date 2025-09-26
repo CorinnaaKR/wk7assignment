@@ -1,13 +1,14 @@
-import Form from "./components/Form"
+import Form from "./components/Form";
 import Entries from "./components/Entries";
 import NavBar from "./components/NavBar";
-import NotFound from "./components/NotFound";
+// import NotFound from "./components/NotFound";
 import Home from "./components/Home";
 import { Routes, Route } from "react-router";
 
 export default function App() {
   return (
     <>
+      <Form />
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -19,14 +20,6 @@ export default function App() {
   );
 }
 
-export default function App() {
-    return (
-        <>
-        <Form/>
-        </>
-    );
-}
 //SET UP THE ROUTES
 
 //ALL COMPONENTS REDNERED IN HERE
-
