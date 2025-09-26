@@ -65,7 +65,7 @@ export default function Form() {
         </fieldset>
 
         <fieldset>
-          <label htmlFor="entry">Job: </label>
+          <label htmlFor="entry">Entry: </label>
           <input
             type="text"
             name="entry"
