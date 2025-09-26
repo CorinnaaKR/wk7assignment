@@ -1,22 +1,6 @@
 //MANNY CODE for querying database
 
 //TODO: read data from the biscuits table
-app.get("/biscuits", async (_, res) => {
-  //error handling
-  //try ... catch
-  try {
-    //query the database to send me the biscuits data
-    //test your query in the SQL editor first to check syntax
-    const data = await db.query(
-      `SELECT biscuit_name, src, description, crunchiness FROM biscuits;`
-    );
-    //wrangling the database data Result object
-    res.json(data.rows);
-  } catch (error) {
-    console.error("Error in the biscuits route", error);
-    res.status(500).json({ success: false });
-  }
-});
 
 //TODO: read data from biscuits and customers
 app.get("/biscuits-customers", async (_, res) => {
