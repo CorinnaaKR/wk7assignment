@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import NotFound from "./components/NotFound";
 import Home from "./components/Home";
 import { Routes, Route } from "react-router";
+import "./App.css";
 
 export default function App() {
   return (

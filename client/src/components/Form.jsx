@@ -14,6 +14,11 @@
 //BE CONSIST WITH NAMING CONVENTIONS
 
 import { useState } from "react";
+import "./Form.css";
+
+<>
+  <h1>Penny for your thoughts?</h1>
+</>;
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -51,6 +56,7 @@ export default function Form() {
   }
   return (
     <>
+      {/* <main className="form"> */}
       <form onSubmit={handleSubmit}>
         <fieldset>
           <label htmlFor="name">Name: </label>
@@ -76,7 +82,10 @@ export default function Form() {
 
         <fieldset>
           <label htmlFor="entry">Entry: </label>
-          <input
+          <textarea
+            className="textarea"
+            rows="20"
+            cols="50"
             type="text"
             name="entry"
             placeholder="Unload your brain here!"
@@ -84,9 +93,10 @@ export default function Form() {
             value={formData.entry}
             onChange={handleInputChange}
           />
+          <button type="submit">Submit</button>
         </fieldset>
-        <button type="submit">Submit</button>
       </form>
+      {/* </main> */}
     </>
   );
 }

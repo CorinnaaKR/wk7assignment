@@ -1,0 +1,17 @@
+.nav {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* not sure why these aren't working, please let me know in feedback */
+.nav:hover {
+  color: green;
+}
+
+.nav:visited {
+  color: blue;
+}

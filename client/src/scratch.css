@@ -1,0 +1,131 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+body {
+  background: radial-gradient(
+    circle,
+    rgba(34, 139, 34, 1) 55%,
+    rgba(13, 1, 1, 1) 100%
+  );
+  background-attachment: fixed;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr min(100ch, 90%) 1fr;
+  grid-template-rows: auto;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bolder;
+  grid-column: 2;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.intro,
+.form-section,
+#immersive,
+.character-wrapper,
+.links-wrapper {
+  grid-column: 2;
+  margin: 10px;
+  border-color: olive;
+  border-style: inset;
+  border-width: 8px;
+  text-align: center;
+  padding: 20px;
+}
+
+#immersive {
+  font-weight: bold;
+}
+
+.item-wrapper,
+.summon {
+  grid-column: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  margin: 10px 0;
+  border: olive, inset, 8px;
+  text-align: center;
+  padding: 20px;
+}
+
+.character-wrapper {
+  overflow-y: scroll;
+  width: auto;
+  height: 100vh;
+}
+
+#form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  justify-items: center;
+}
+
+#form {
+  width: 100%;
+  max-width: 400px;
+}
+#form textarea {
+  height:70px;
+  min-height: 50px;
+  max-height:200px;
+}
+
+.usefulLinks {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.character-card,
+.item-card {
+  border: 2px solid grey;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+button:hover {
+  background-color: olive;
+  color: white;
+}
+
+a:hover {
+  color: rgb(237, 186, 0);
+}
+
+a:visited {
+  color: purple;
+}
+
+@media (max-width: 800px) {
+  .intro,
+  .form-section,
+  #immersive,
+  #character-container,
+  .links-wrapper,
+  .character-wrapper {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+ 
+footer {
+  padding-top:10px;
+}
+
+textarea { 
+resize: vertical; 
+}

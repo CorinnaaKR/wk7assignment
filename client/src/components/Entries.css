@@ -1,0 +1,20 @@
+h1 {
+  font-size: 30px;
+}
+
+.immersive {
+  font-size: 20px;
+  color: goldenrod;
+  justify-content: center;
+}
+
+.submissions {
+  overflow-y: scroll;
+}
+
+.entries {
+  height: auto;
+  width: fit-content;
+  color: green;
+  padding: 10px;
+}

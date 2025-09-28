@@ -7,6 +7,8 @@
 
 //display entries from table /add-brain
 
+import "./Entries.css";
+
 import { useState, useEffect } from "react";
 
 export default function Entries() {
@@ -31,17 +33,25 @@ export default function Entries() {
     return () => clearInterval(EntryInterval);
   }, []);
   console.log(Entries);
+
   return (
-    <>
+    <div className="submissions">
+      <div>
+        <h1>Inception Inspection</h1>
+        <p className="immersive">
+          Your thoughts are now floating around in the sea of thoughts!
+        </p>
+      </div>
+      ;
       {Entries.map((entry) => {
         return (
-          <div>
+          <div className="entries">
             <h3>{entry.name}</h3>
             <p>{entry.title}</p>
             <p>{entry.entry}</p>
           </div>
         );
       })}
-    </>
+    </div>
   );
 }

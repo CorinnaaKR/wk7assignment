@@ -1,0 +1,23 @@
+/* * {
+  background-color: black;
+} */
+
+.form {
+  color: white;
+}
+
+fieldset {
+  gap: 40px;
+  justify-content: center;
+  background-color: goldenrod;
+  display: block;
+  color: white;
+}
+
+.textarea {
+  color: white;
+}
+
+button {
+  color: white;
+}

@@ -1,2 +1,0 @@
-- WIREFRAME - what do you want to build?
-  -PLAN DATABASE SCHEMA
