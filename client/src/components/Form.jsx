@@ -36,8 +36,17 @@ export default function Form() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ formData }),
+      body: JSON.stringify(formData), //suggested change by ChatGPT from ({formDaata}) - ask Bertie the signifcant as I only partially understand.
+
+      //added in code from group project, vaguely understand its purpose but double check with Bertie
+    }).then((response) => {
+      if (response.ok) {
+        window.location.reload();
+      } else {
+        console.error("Failed to submit the review.");
+      }
     });
+
     //polling demo (fetch request for adding new data /add-brain)
   }
   return (
@@ -50,7 +59,7 @@ export default function Form() {
             name="name"
             placeholder="Username"
             required
-            value={formData.username}
+            value={formData.name}
             // defaultValue={} for autofilling
             onChange={handleInputChange}
           />
@@ -58,6 +67,7 @@ export default function Form() {
           <input
             type="text"
             name="type"
+            placeholder="Thought? Confession? Secret?"
             required
             value={formData.type}
             onChange={handleInputChange}
@@ -69,6 +79,7 @@ export default function Form() {
           <input
             type="text"
             name="entry"
+            placeholder="Unload your brain here!"
             required
             value={formData.entry}
             onChange={handleInputChange}
